@@ -45,6 +45,9 @@ func bridge_impl() {
 			defer close(chanStream)
 			for i := 0; i < 10; i++ {
 				stream := make(chan interface{})
+				//a workaround stream := make(chan interface{},1)
+				//make it so that stream <- i is non blocking
+
 				//Next line is blocking which means it won't move for the next line
 				//till it's consumed
 				chanStream <- stream
