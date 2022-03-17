@@ -5,6 +5,9 @@ import (
 	"net/http"
 )
 
+//In order to seperate concerns
+//We will collect the response
+//In order to handle it more cleanly
 type Result struct {
 	Error    error
 	Response *http.Response

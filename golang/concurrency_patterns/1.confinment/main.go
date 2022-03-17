@@ -17,6 +17,8 @@ func orChannel() {
 			return channels[0]
 		}
 		orDone := make(chan interface{})
+		//Creates a go routine each 3 channels
+		//which results in more overhead
 		go func() {
 			defer close(orDone)
 			switch len(channels) {
