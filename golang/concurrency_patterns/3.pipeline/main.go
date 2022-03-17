@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 //pattern generatorProducer -> operation -> operation -> operation
+//Channels are emiting values and these values are only consumed once
+//This open up the possibility of using more workers to implement a fan out pattern
 func main() {
 	pipeline()
 }
