@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//pattern generatorProducer -> operation -> operation -> operation
 func main() {
 	pipeline()
 }
